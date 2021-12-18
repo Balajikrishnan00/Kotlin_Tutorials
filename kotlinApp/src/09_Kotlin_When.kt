@@ -26,15 +26,16 @@ fun main() {
     }
     ---------------------------------------------------
 
-
+*/
     // Group Find
     println("Enter a Team or Team number:")
     val Team= readLine()
-    when ((Team!!.toInt()) ||  (Team!!.toString())){
+    when (Team!!.toInt()){
         1,2,3,4,5->println("Team A")
+        else->println("This is Else Part")
 
     }
 
-     */
+
 
 }
