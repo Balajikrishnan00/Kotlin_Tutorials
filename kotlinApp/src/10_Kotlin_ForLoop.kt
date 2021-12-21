@@ -1,4 +1,7 @@
 fun main() {
+
+    /*
+
     val marks= arrayOf(80,90,100,90,80)
     var i=1
     for (mark in marks){
@@ -14,4 +17,19 @@ fun main() {
         }
         i++
     }
+
+
+
+    val mk= arrayOf(1,2,3,4,5,6,7,8,9,10)
+    for (i in mk.indices) {
+        println("$i ${mk[i]}")
+    }
+
+    var input= readLine()!!
+    var sum=10
+    sum+=input.toInt()
+    println(sum)
+
+     */
+
 }
