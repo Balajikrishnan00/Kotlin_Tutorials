@@ -1,6 +1,7 @@
 
 
 fun main() {
+
     val colors=arrayOf("Red","Green","Blue")
 
     val programming= arrayOf("C","C++","C#","Java","Python","Kotlin")
@@ -86,6 +87,88 @@ fun main() {
     println(f1.set(1,"Balaji"))
 
     println(f11.distinct())
+
+    println(f11.drop(2))
+
+    println(f11.dropLast(6))
+
+    val nesterArray= arrayOf(
+        arrayOf(1,2,3),
+        arrayOf(4,5,6),
+        arrayOf(7,8,9)
+    )
+
+    for( outer in nesterArray){
+        for (inner in outer){
+            println(inner)
+        }
+    }
+    println("-------------------------------")
+    println(nesterArray[0][2])
+
+    println(nesterArray.indices)
+
+
+    println("------------------------------------------------")
+
+    println("${nesterArray[0].size}")
+    println(nesterArray[1].size)
+
+
+    val strarray= arrayOf<String>("Balaji","Krishnan","Bala","Guna")
+
+    println(strarray[0].length)
+    println(strarray[1].length)
+
+    strarray.forEach { it ->
+
+        println(it) }
+    println("------------------------------------------------")
+    strarray.forEach { name -> println(name) }
+
+    println("------------------------------------------------")
+
+    strarray.forEachIndexed { index, s ->
+        println("$index  data \"$s\"")
+    }
+    println("------------------------------------------------")
+    for (x in strarray.indices)
+        println("$x data \"${strarray[x]}\"" )
+    println("-------------------------------------------------")
+
+
+    val map= mapOf(1 to "a",2 to "b",3 to "c",4 to "d")
+
+    map.forEach{ it -> println(it)}
+
+    println("--------------------------------------------------")
+
+    map.forEach { key, value -> println(" key is :${key} value is :${value} ")  }
+
+    println("---------------------------------------------------")
+
+    var map2= mutableMapOf(1 to "balaji",2 to "krishnan",3 to "Welcome",4 to "Good night")
+
+    map2.put(5,"Guna")
+    println(map2)
+    println(map2.size)
+    map2.set(1,"BalajiKrishnan")
+    println(map2)
+
+    println(map2.get(2))
+    println("-----------------------------------------------------")
+
+    var mutablelist= mutableListOf(10,"Balaji","3","Krishnan")
+
+    mutablelist.add(2,"Welcome")
+
+    println(mutablelist)
+    mutablelist.add(1,"Good Morning")
+
+    println(mutablelist)
+    mutablelist.add("23")
+    println(mutablelist)
+
 
 
 }
