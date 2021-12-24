@@ -50,6 +50,10 @@ fun maths(a:Int,b:Int){
 
 fun sayGreet()=println("Ji Welcome ")
 
+fun sayHi(greet:String="WELCOME"){
+    println(greet)
+}
+
 
 fun main() {
     //welcome("Balaji")
@@ -58,4 +62,7 @@ fun main() {
 
     //maths(10,20)
     sayGreet()
+
+    sayHi("welcome")
+
 }
