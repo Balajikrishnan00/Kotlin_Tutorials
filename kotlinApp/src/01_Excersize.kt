@@ -12,7 +12,7 @@ class AccessCard(val Code:Int){
 
     val warehouseCodes= arrayOf(5,6,7,8)
 
-    fun finderEnable(){
+    fun fingerEnable(){
         if (Code in accessCodes){
             fingerVerify=true
             println("Your access card is Enabled...")
@@ -20,6 +20,13 @@ class AccessCard(val Code:Int){
             println("Your Card Doesn't please try again!!!")
         }
 
+    }
+
+    fun fingerDisable(){
+        if( fingerVerify){
+            fingerVerify=false
+            println("Your Access is disabled")
+        }
     }
 
     fun securityEntrance(){
@@ -31,9 +38,11 @@ class AccessCard(val Code:Int){
             }
 
         }else{
-            println("Please Enable your access card")
+            println("Please Enable your access card...")
         }
     }
+
+
 
     fun adminEntrance(){
         if (fingerVerify){
@@ -71,19 +80,9 @@ class AccessCard(val Code:Int){
 fun main() {
 
     val balaji=AccessCard(5)
-    balaji.finderEnable()
+    balaji.fingerEnable()
     balaji.securityEntrance()
-    balaji.adminEntrance()
-    balaji.packaging()
-
-    println("--------------------------------------")
-
-    val siva=AccessCard(9)
-    siva.finderEnable()
-    //siva.securityEntrance()
-    siva.packaging()
-
-
-
+    balaji.fingerDisable()
+    balaji.securityEntrance()
 
 }

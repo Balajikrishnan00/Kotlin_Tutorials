@@ -1,14 +1,17 @@
-class persion constructor(name:String,sex:String) {
+class persion constructor(var name:String,var sex:String) {
 
-    val newName=name
-    val Sex=sex
+    val name2="Balaji"
+
 
     init {
-        val newName1=newName
-        val Sex1=Sex
+        println("This object Name:$name\nThis object Sex:$sex")
 
         println("--------- init 1------------------")
-        println(" $newName1  , $Sex1")
+
+        val name1=name
+        val sex1=sex
+        
+        println(this::name)
 
         println("----------init 1 end--------------")
 
@@ -18,33 +21,36 @@ class persion constructor(name:String,sex:String) {
 
         println("------------- Init 2----------------")
 
+        println()
+
         println("--------------Init 2 End------------")
     }
 
     fun sleep(){
-        println("$newName  is Sleeping")
+        println("${this::name2} is Sleeping")
+
 
     }
 
     fun wakeup(){
-        println("${this.newName} Wake up")
+        println(" Wake up")
 
     }
 
     fun eat(){
-        println("$newName Eating")
+        println(" Eating")
 
     }
 
     fun run(){
-        println("$newName Running")
+        println(" Running")
 
     }
 
     fun sit(){
-        println("$newName Sitting")
+        println(" Sitting")
 
     }
-
+    
 
 }
