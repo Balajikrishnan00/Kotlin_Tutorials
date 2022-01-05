@@ -8,13 +8,20 @@ class Greeting(){
 
     }
     fun goodEvening(){
+        println("goodEvening")
 
     }
 }
 
 interface PersionInfoProvider{
+
+    val providerInfo:String
     fun printInfo(greet: Greeting){
         println("interface fun  printInfo")
+        //greet.goodEvening()
+        println(providerInfo)
+
+
     }
 
 }
@@ -22,16 +29,24 @@ interface PersionInfoProvider{
 
 class BasicInfoProvider:PersionInfoProvider{
 
+    override val providerInfo: String
+        get() = "BasicInfoProvider.com"
+
     init {
         println("BasicInfoProvider")
     }
 
     override fun printInfo(greet: Greeting) {
+        println("Basicinfo printInfo")
+        greet.goodEvening()
+        println(providerInfo)
+        super.printInfo(greet)
 
     }
 }
 
 fun main(arg:Array<String>) {
     val user1=BasicInfoProvider()
+    user1.printInfo(Greeting())
 
 }
